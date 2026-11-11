@@ -34,22 +34,22 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpDadosPrincipais = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.cmbFornecedor = new System.Windows.Forms.ComboBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.cmbCategorias = new System.Windows.Forms.ComboBox();
+            this.cmbFornecedores = new System.Windows.Forms.ComboBox();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.lblFornecedor = new System.Windows.Forms.Label();
-            this.lblCategoria = new System.Windows.Forms.Label();
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.grpPrecificacaoEEstoque = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.txtMargem = new System.Windows.Forms.TextBox();
+            this.nudStockMinimo = new System.Windows.Forms.NumericUpDown();
+            this.nudPrecoCusto = new System.Windows.Forms.NumericUpDown();
             this.lblStockMinimo = new System.Windows.Forms.Label();
             this.lblPrecoVenda = new System.Windows.Forms.Label();
             this.lblStockInicial = new System.Windows.Forms.Label();
@@ -68,19 +68,19 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.imgExcluir = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.mtbCodigo = new System.Windows.Forms.MaskedTextBox();
+            this.nudStockInicial = new System.Windows.Forms.NumericUpDown();
+            this.nudPrecoVenda = new System.Windows.Forms.NumericUpDown();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpDadosPrincipais.SuspendLayout();
             this.grpPrecificacaoEEstoque.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockMinimo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecoCusto)).BeginInit();
             this.grpSituacaoEDetalhes.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockInicial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecoVenda)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
@@ -119,12 +119,12 @@
             // 
             // grpDadosPrincipais
             // 
+            this.grpDadosPrincipais.Controls.Add(this.mtbCodigo);
             this.grpDadosPrincipais.Controls.Add(this.label2);
             this.grpDadosPrincipais.Controls.Add(this.label1);
             this.grpDadosPrincipais.Controls.Add(this.txtDescricao);
-            this.grpDadosPrincipais.Controls.Add(this.cmbCategoria);
-            this.grpDadosPrincipais.Controls.Add(this.cmbFornecedor);
-            this.grpDadosPrincipais.Controls.Add(this.txtCodigo);
+            this.grpDadosPrincipais.Controls.Add(this.cmbCategorias);
+            this.grpDadosPrincipais.Controls.Add(this.cmbFornecedores);
             this.grpDadosPrincipais.Controls.Add(this.txtNomeProduto);
             this.grpDadosPrincipais.Controls.Add(this.lblDescricao);
             this.grpDadosPrincipais.Controls.Add(this.lblFornecedor);
@@ -140,6 +140,28 @@
             this.grpDadosPrincipais.TabStop = false;
             this.grpDadosPrincipais.Text = "Dados Principais";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(99, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 19);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(308, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(16, 19);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "*";
+            // 
             // txtDescricao
             // 
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -151,11 +173,11 @@
             this.txtDescricao.Size = new System.Drawing.Size(497, 66);
             this.txtDescricao.TabIndex = 5;
             // 
-            // cmbCategoria
+            // cmbCategorias
             // 
-            this.cmbCategoria.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Items.AddRange(new object[] {
+            this.cmbCategorias.Font = new System.Drawing.Font("Arial", 12.25F);
+            this.cmbCategorias.FormattingEnabled = true;
+            this.cmbCategorias.Items.AddRange(new object[] {
             "Embalagens",
             "Confeitaria",
             "Ingredientes para Panificação",
@@ -166,36 +188,27 @@
             "Doces e Sobremesas",
             "Bolos e Tortas",
             "Pães"});
-            this.cmbCategoria.Location = new System.Drawing.Point(583, 44);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(196, 26);
-            this.cmbCategoria.TabIndex = 3;
-            this.cmbCategoria.Text = "Selecione...";
+            this.cmbCategorias.Location = new System.Drawing.Point(583, 44);
+            this.cmbCategorias.Name = "cmbCategorias";
+            this.cmbCategorias.Size = new System.Drawing.Size(196, 26);
+            this.cmbCategorias.TabIndex = 3;
+            this.cmbCategorias.Text = "Selecione...";
             // 
-            // cmbFornecedor
+            // cmbFornecedores
             // 
-            this.cmbFornecedor.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.cmbFornecedor.FormattingEnabled = true;
-            this.cmbFornecedor.Items.AddRange(new object[] {
+            this.cmbFornecedores.Font = new System.Drawing.Font("Arial", 12.25F);
+            this.cmbFornecedores.FormattingEnabled = true;
+            this.cmbFornecedores.Items.AddRange(new object[] {
             "Vigor",
             "Unilever",
             "Coca-Cola",
             "Bauducco",
             "Nestlé"});
-            this.cmbFornecedor.Location = new System.Drawing.Point(15, 98);
-            this.cmbFornecedor.Name = "cmbFornecedor";
-            this.cmbFornecedor.Size = new System.Drawing.Size(238, 26);
-            this.cmbFornecedor.TabIndex = 4;
-            this.cmbFornecedor.Text = "Selecione...";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodigo.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.txtCodigo.Location = new System.Drawing.Point(15, 45);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(162, 26);
-            this.txtCodigo.TabIndex = 1;
+            this.cmbFornecedores.Location = new System.Drawing.Point(15, 98);
+            this.cmbFornecedores.Name = "cmbFornecedores";
+            this.cmbFornecedores.Size = new System.Drawing.Size(238, 26);
+            this.cmbFornecedores.TabIndex = 4;
+            this.cmbFornecedores.Text = "Selecione...";
             // 
             // txtNomeProduto
             // 
@@ -226,16 +239,6 @@
             this.lblFornecedor.TabIndex = 3;
             this.lblFornecedor.Text = "Fornecedor:";
             // 
-            // lblCategoria
-            // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Arial", 10.25F);
-            this.lblCategoria.Location = new System.Drawing.Point(580, 25);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(77, 16);
-            this.lblCategoria.TabIndex = 2;
-            this.lblCategoria.Text = "Categoria: ";
-            // 
             // lblNomeProduto
             // 
             this.lblNomeProduto.AutoSize = true;
@@ -256,13 +259,34 @@
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(650, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 19);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "*";
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Arial", 10.25F);
+            this.lblCategoria.Location = new System.Drawing.Point(580, 25);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(77, 16);
+            this.lblCategoria.TabIndex = 2;
+            this.lblCategoria.Text = "Categoria: ";
+            // 
             // grpPrecificacaoEEstoque
             // 
-            this.grpPrecificacaoEEstoque.Controls.Add(this.textBox3);
-            this.grpPrecificacaoEEstoque.Controls.Add(this.numericUpDown4);
-            this.grpPrecificacaoEEstoque.Controls.Add(this.numericUpDown3);
-            this.grpPrecificacaoEEstoque.Controls.Add(this.numericUpDown2);
-            this.grpPrecificacaoEEstoque.Controls.Add(this.numericUpDown1);
+            this.grpPrecificacaoEEstoque.Controls.Add(this.nudPrecoVenda);
+            this.grpPrecificacaoEEstoque.Controls.Add(this.nudStockInicial);
+            this.grpPrecificacaoEEstoque.Controls.Add(this.txtMargem);
+            this.grpPrecificacaoEEstoque.Controls.Add(this.nudStockMinimo);
+            this.grpPrecificacaoEEstoque.Controls.Add(this.nudPrecoCusto);
             this.grpPrecificacaoEEstoque.Controls.Add(this.lblStockMinimo);
             this.grpPrecificacaoEEstoque.Controls.Add(this.lblPrecoVenda);
             this.grpPrecificacaoEEstoque.Controls.Add(this.lblStockInicial);
@@ -276,46 +300,49 @@
             this.grpPrecificacaoEEstoque.TabStop = false;
             this.grpPrecificacaoEEstoque.Text = "Precificação e Estoque";
             // 
-            // textBox3
+            // txtMargem
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.textBox3.Location = new System.Drawing.Point(122, 72);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 5;
+            this.txtMargem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMargem.Enabled = false;
+            this.txtMargem.Font = new System.Drawing.Font("Arial", 12.25F);
+            this.txtMargem.Location = new System.Drawing.Point(122, 72);
+            this.txtMargem.Name = "txtMargem";
+            this.txtMargem.Size = new System.Drawing.Size(100, 26);
+            this.txtMargem.TabIndex = 5;
+            this.txtMargem.Text = "0,00";
             // 
-            // numericUpDown4
+            // nudStockMinimo
             // 
-            this.numericUpDown4.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.numericUpDown4.Location = new System.Drawing.Point(395, 113);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(85, 26);
-            this.numericUpDown4.TabIndex = 9;
+            this.nudStockMinimo.Font = new System.Drawing.Font("Arial", 12.25F);
+            this.nudStockMinimo.Location = new System.Drawing.Point(395, 113);
+            this.nudStockMinimo.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudStockMinimo.Name = "nudStockMinimo";
+            this.nudStockMinimo.Size = new System.Drawing.Size(85, 26);
+            this.nudStockMinimo.TabIndex = 9;
             // 
-            // numericUpDown3
+            // nudPrecoCusto
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.numericUpDown3.Location = new System.Drawing.Point(406, 27);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(74, 26);
-            this.numericUpDown3.TabIndex = 3;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.numericUpDown2.Location = new System.Drawing.Point(122, 113);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(74, 26);
-            this.numericUpDown2.TabIndex = 7;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.numericUpDown1.Location = new System.Drawing.Point(164, 27);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(74, 26);
-            this.numericUpDown1.TabIndex = 1;
+            this.nudPrecoCusto.DecimalPlaces = 2;
+            this.nudPrecoCusto.Font = new System.Drawing.Font("Arial", 12.25F);
+            this.nudPrecoCusto.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.nudPrecoCusto.Location = new System.Drawing.Point(164, 27);
+            this.nudPrecoCusto.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudPrecoCusto.Name = "nudPrecoCusto";
+            this.nudPrecoCusto.Size = new System.Drawing.Size(74, 26);
+            this.nudPrecoCusto.TabIndex = 1;
+            this.nudPrecoCusto.ValueChanged += new System.EventHandler(this.nudPrecoCusto_ValueChanged);
             // 
             // lblStockMinimo
             // 
@@ -363,9 +390,9 @@
             this.lblPrecoCusto.Font = new System.Drawing.Font("Arial", 10.25F);
             this.lblPrecoCusto.Location = new System.Drawing.Point(12, 32);
             this.lblPrecoCusto.Name = "lblPrecoCusto";
-            this.lblPrecoCusto.Size = new System.Drawing.Size(146, 16);
+            this.lblPrecoCusto.Size = new System.Drawing.Size(141, 16);
             this.lblPrecoCusto.TabIndex = 0;
-            this.lblPrecoCusto.Text = "Preço de Cursto (R$):";
+            this.lblPrecoCusto.Text = "Preço de Custo (R$):";
             // 
             // grpSituacaoEDetalhes
             // 
@@ -425,6 +452,7 @@
             this.btnNovo.Text = "  Novo";
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // imgNovo
             // 
@@ -444,6 +472,7 @@
             this.btnSalvar.Text = "  Salvar";
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // imgSalvar
             // 
@@ -464,6 +493,7 @@
             this.btnLimpar.Text = "  Limpar";
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // imgLimpar
             // 
@@ -484,6 +514,7 @@
             this.btnExcluir.Text = "  Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // imgExcluir
             // 
@@ -505,38 +536,50 @@
             this.panel1.Size = new System.Drawing.Size(823, 85);
             this.panel1.TabIndex = 8;
             // 
-            // label1
+            // mtbCodigo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(308, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 19);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "*";
+            this.mtbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtbCodigo.Enabled = false;
+            this.mtbCodigo.Font = new System.Drawing.Font("Arial", 12.25F);
+            this.mtbCodigo.Location = new System.Drawing.Point(15, 46);
+            this.mtbCodigo.Mask = "000000";
+            this.mtbCodigo.Name = "mtbCodigo";
+            this.mtbCodigo.Size = new System.Drawing.Size(138, 26);
+            this.mtbCodigo.TabIndex = 9;
+            this.mtbCodigo.Text = "000000";
             // 
-            // label2
+            // nudStockInicial
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(99, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 19);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "*";
+            this.nudStockInicial.Font = new System.Drawing.Font("Arial", 12.25F);
+            this.nudStockInicial.Location = new System.Drawing.Point(122, 117);
+            this.nudStockInicial.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudStockInicial.Name = "nudStockInicial";
+            this.nudStockInicial.Size = new System.Drawing.Size(74, 26);
+            this.nudStockInicial.TabIndex = 10;
             // 
-            // label3
+            // nudPrecoVenda
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(650, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 19);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "*";
+            this.nudPrecoVenda.DecimalPlaces = 2;
+            this.nudPrecoVenda.Font = new System.Drawing.Font("Arial", 12.25F);
+            this.nudPrecoVenda.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.nudPrecoVenda.Location = new System.Drawing.Point(395, 28);
+            this.nudPrecoVenda.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudPrecoVenda.Name = "nudPrecoVenda";
+            this.nudPrecoVenda.Size = new System.Drawing.Size(74, 26);
+            this.nudPrecoVenda.TabIndex = 11;
+            this.nudPrecoVenda.ValueChanged += new System.EventHandler(this.nudPrecoVenda_ValueChanged);
             // 
             // frmCadastroDeProdutos
             // 
@@ -551,6 +594,7 @@
             this.Name = "frmCadastroDeProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Produtos";
+            this.Load += new System.EventHandler(this.frmCadastroDeProdutos_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -558,14 +602,14 @@
             this.grpDadosPrincipais.PerformLayout();
             this.grpPrecificacaoEEstoque.ResumeLayout(false);
             this.grpPrecificacaoEEstoque.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockMinimo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecoCusto)).EndInit();
             this.grpSituacaoEDetalhes.ResumeLayout(false);
             this.grpSituacaoEDetalhes.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStockInicial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecoVenda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -590,15 +634,12 @@
         private System.Windows.Forms.Label lblMargem;
         private System.Windows.Forms.Label lblPrecoCusto;
         private System.Windows.Forms.Label lblDataCadastro;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.NumericUpDown nudStockMinimo;
+        private System.Windows.Forms.NumericUpDown nudPrecoCusto;
         private System.Windows.Forms.TextBox txtNomeProduto;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox cmbFornecedor;
-        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.TextBox txtMargem;
+        private System.Windows.Forms.ComboBox cmbFornecedores;
+        private System.Windows.Forms.ComboBox cmbCategorias;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.DateTimePicker dtpDataCadastro;
         private System.Windows.Forms.Button btnNovo;
@@ -613,5 +654,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox mtbCodigo;
+        private System.Windows.Forms.NumericUpDown nudPrecoVenda;
+        private System.Windows.Forms.NumericUpDown nudStockInicial;
     }
 }
